@@ -548,11 +548,11 @@ No shortcuts — just mastery, projects, and proof of skill.
             delay: index * 0.15
           }}>
               <Card className="card-hover group h-full">
-                <CardContent className="p-6 bg-teal-500">
+                <CardContent className="p-6 bg-primary-foreground">
                   <div className="flex items-center mb-4">
                     
                     <div>
-                      <div className="font-bold text-white">{testimonial.name}</div>
+                      <div className="font-bold text-primary">{testimonial.name}</div>
                       <div className="text-sm text-blinkpath-orange">
                         {testimonial.role}
                       </div>
@@ -563,7 +563,7 @@ No shortcuts — just mastery, projects, and proof of skill.
                     {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                   </div>
 
-                  <p className="text-white/90 italic">
+                  <p className="italic text-accent bg-inherit">
                     "{testimonial.content}"
                   </p>
                 </CardContent>
