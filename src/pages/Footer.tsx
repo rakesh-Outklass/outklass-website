@@ -78,7 +78,7 @@ const Footer = () => {
           </div>
 
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-            <p>© 2025 outklass. All rights reserved. | Bridging the gap between classroom and industry.</p>
+            <p className="text-gray-400">© 2025 outklass. All rights reserved. | Bridging the gap between classroom and industry.</p>
           </div>
         </div>
       </footer>
