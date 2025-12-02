@@ -147,8 +147,8 @@ const Index = () => {
         ease: "easeOut"
       }} className="w-full max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-3xl md:text-5xl font-poppins tracking-tight mb-6 leading-tight text-center font-semibold mx-0 my-0 px-0 py-0 md:mb-0 ml-0 lg:text-7xl text-primary-foreground">
-            Launch your career with<br />
-            <span className="text-[#ff5f45] font-semibold text-7xl outklass-flicker">outklass</span>
+            Building Industry 5.0 Engineers   <br />
+            
           </h1>
           <p className="text-base mb-4 md:mb-6 italic font-poppins md:text-xl py-[10px]">
             &quot;outlearn-outskill-outklass&quot;
