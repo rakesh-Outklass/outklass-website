@@ -302,13 +302,13 @@ const Contact = () => {
                                             </div>
                                              Whatsapp : +91 7708824754
                                         </Button>
-                                        <Button variant="outline" className="w-full justify-start bg-accent">
+                                        <Button variant="outline" className="w-full justify-start bg-inherit">
                                             <div className="w-6 h-6 mr-3 bg-blue-500 rounded flex items-center justify-center text-white text-xs">
                                                 T
                                             </div>
                                             Telegram: @ outklass_support
                                         </Button>
-                                        <Button variant="outline" className="w-full justify-start bg-accent">
+                                        <Button variant="outline" className="w-full justify-start bg-inherit">
                                             <div className="w-6 h-6 mr-3 bg-pink-500 rounded flex items-center justify-center text-white text-xs">
                                                 I
                                             </div>
