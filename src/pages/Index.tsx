@@ -155,7 +155,7 @@ const Index = () => {
           </p>
           <p className="text-lg md:text-xl mb-4 font-poppins text-primary-foreground">
             Go from{" "}
-            <span className="font-bold text-[#ff5f45]">
+            <span className="font-bold text-teal-100">
               Zero to Industry-Ready
             </span>{" "}
             in Next-Gen Tech
