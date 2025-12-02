@@ -57,7 +57,6 @@ const Navigation = () => {
         },
         { name: "Career Support", path: "/career-support" },
         { name: "Events", path: "/events" },
-        { name: "Blog", path: "/blog" },
         { name: "Contact", path: "/contact" },
     ]
 
