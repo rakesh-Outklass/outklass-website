@@ -272,6 +272,19 @@ No shortcuts — just mastery, projects, and proof of skill.
         </div>
       </motion.section>
 
+      <motion.div initial={{
+      opacity: 0
+    }} whileInView={{
+      opacity: 1
+    }} viewport={{
+      once: false,
+      amount: 0.5
+    }} transition={{
+      duration: 0.6
+    }} className="pb-10">
+        <HiringPartners />
+      </motion.div>
+
       {/* Career Support Section */}
       <motion.section initial={{
       opacity: 0,
@@ -347,19 +360,6 @@ No shortcuts — just mastery, projects, and proof of skill.
           </div>
         </div>
       </motion.section>
-
-      <motion.div initial={{
-      opacity: 0
-    }} whileInView={{
-      opacity: 1
-    }} viewport={{
-      once: false,
-      amount: 0.5
-    }} transition={{
-      duration: 0.6
-    }} className="pb-10">
-        <HiringPartners />
-      </motion.div>
 
       {/* Active Courses Section */}
       <motion.section initial={{
