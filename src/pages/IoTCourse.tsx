@@ -215,7 +215,7 @@ const IoTCourse = () => {
                             <div className="grid grid-cols-3 gap-6 mb-8">
                                 <div className="text-center">
                                     <Clock className="w-6 h-6 mx-auto mb-2 text-[#ff5f45]" />
-                                    <div className="font-bold">2.5 Months</div>
+                                    <div className="font-bold">60 Hours</div>
                                     <div className="text-sm text-muted-foreground">
                                         Duration
                                     </div>
