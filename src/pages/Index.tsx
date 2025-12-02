@@ -160,10 +160,9 @@ const Index = () => {
             </span>{" "}
             in Next-Gen Tech
           </p>
-          <p className="text-base md:text-lg mb-8 font-poppins">
-            No fake job guarantees. No fine print. Just real skills, real
-            projects, and a real shot at getting hired — if you're willing
-            to do the work
+          <p className="text-base md:text-lg mb-8 font-poppins text-primary-foreground">
+            Where tomorrow’s Industry 5.0 innovators get trained, mentored, and transformed.
+No shortcuts — just mastery, projects, and proof of skill.   
           </p>
           
           {/* Buttons */}
