@@ -548,7 +548,7 @@ No shortcuts — just mastery, projects, and proof of skill.
             delay: index * 0.15
           }}>
               <Card className="card-hover group h-full">
-                <CardContent className="p-6">
+                <CardContent className="p-6 bg-teal-500">
                   <div className="flex items-center mb-4">
                     
                     <div>
