@@ -150,7 +150,7 @@ const Index = () => {
             Building Industry 5.0 Engineers   <br />
             
           </h1>
-          <p className="text-base mb-4 md:mb-6 italic font-poppins md:text-xl py-[10px]">
+          <p className="text-base mb-4 md:mb-6 italic font-poppins py-[10px] text-accent md:text-2xl">
             &quot;outlearn-outskill-outklass&quot;
           </p>
           <p className="text-lg md:text-xl mb-4 font-poppins text-primary-foreground">
