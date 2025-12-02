@@ -300,7 +300,7 @@ const Contact = () => {
                                             <div className="w-6 h-6 mr-3 bg-green-500 rounded flex items-center justify-center text-white text-xs">
                                                 W
                                             </div>
-                                             Whatsapp : +91 7708824754
+                                             Whatsapp : +91 8838194157
                                         </Button>
                                         <Button variant="outline" className="w-full justify-start bg-inherit">
                                             <div className="w-6 h-6 mr-3 bg-blue-500 rounded flex items-center justify-center text-white text-xs">
