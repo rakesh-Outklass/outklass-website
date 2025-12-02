@@ -216,7 +216,7 @@ const Courses = () => {
     status: "coming-soon",
     icon: <Cpu className="w-5 h-5" />
   }];
-  return <div className="min-h-screen cyber-bg glass-section">
+  return <div className="min-h-screen cyber-bg">
       <motion.section initial={{
       opacity: 0,
       y: 50
@@ -259,10 +259,10 @@ const Courses = () => {
               IoT and Embedded Systems
             </p>
             <div className="flex flex-wrap gap-3 justify-center mx-0 px-0">
-              <Badge className="glass-accent text-white border-0 px-4 py-2 shadow-lg rounded-full">
+              <Badge className="bg-blinkpath-orange/20 text-blinkpath-orange border-blinkpath-orange px-4 py-2 shadow-none border-destructive rounded-sm">
                 🔥 Hot Skills
               </Badge>
-              <Badge className="glass-subtle text-teal-primary border-teal-primary/30 px-4 py-2 rounded-full">
+              <Badge className="bg-gen-z-purple/20 text-gen-z-purple border-gen-z-purple px-4 py-2 bg-emerald-100 text-teal-600 border-teal-400 rounded-sm">
                 💼 Industry Ready 
               </Badge>
               

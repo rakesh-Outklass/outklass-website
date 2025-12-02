@@ -69,8 +69,8 @@ const Navigation = () => {
             <nav
                 className={`sticky top-0 w-full z-50 transition-all duration-500 ${
                     isScrolled
-                        ? "glass backdrop-blur-xl shadow-2xl border-b border-teal-primary/20"
-                        : "backdrop-blur-sm bg-transparent"
+                        ? " backdrop-blur-lg shadow-2xl border-b border-blinkpath-orange"
+                        : " backdrop-blur-sm"
                 }`}>
                 <div className="container-custom">
                     <div className="flex items-center justify-between h-16 md:h-20">
@@ -130,8 +130,8 @@ const Navigation = () => {
 
                                         {item.dropdown &&
                                             activeDropdown === item.name && (
-                                                                <div
-                                                                    className={`absolute top-full left-0 mt-2 w-56 glass backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl py-3 animate-slide-up z-50`}>
+                                                <div
+                                                    className={`absolute top-full left-0 mt-2 w-56 backdrop-blur-md border rounded-xl shadow-2xl py-3 animate-slide-up z-50 bg-darkest-grey/95 border-gray-700`}>
                                                     {item.dropdown.map(
                                                         dropItem => (
                                                             <Link
@@ -201,8 +201,8 @@ const Navigation = () => {
                         className="fixed inset-0 bg-black/80 backdrop-blur-sm"
                         onClick={() => setIsOpen(false)}
                     />
-                    <div className="relative flex flex-col w-full max-w-sm h-full glass backdrop-blur-xl shadow-2xl animate-slide-in-right border-r border-teal-primary/20">
-                        <div className="flex items-center justify-between p-6 border-b border-teal-primary/20">
+                    <div className="relative flex flex-col w-full max-w-sm h-full bg-darkest-grey/95 backdrop-blur-md shadow-2xl animate-slide-in-right border-r border-gray-700">
+                        <div className="flex items-center justify-between p-6 border-b border-gray-700">
                             <img
                                 src="/lovable-uploads/e12bb011-71f5-4323-9067-ad3d9d543f5a.png"
                                 alt=" outklass"
