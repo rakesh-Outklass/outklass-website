@@ -406,12 +406,11 @@ const Index = () => {
           }} className="my-0 px-[50px] py-0 mx-[50px] border-teal-300">
               <Card className="card-hover group h-full">
                 <CardContent className="p-8 border-primary-foreground border-0">
-                  <div className="flex items-start justify-between mb-6 relative p-3 overflow-hidden 
-             border-b border-teal-primary/20">
+                  <div className="flex items-start justify-between mb-6 relative p-3 overflow-hidden border-b border-teal-primary/20 py-0 px-px">
                     {/* <div className="p-3 bg-primary/10 rounded-lg text-[#ff5f45] group-hover:scale-110 transition-transform duration-300">
                       {course.icon}
                      </div> */}
-                    <p className="text-xl font-semibold mb-3 text-white leading-tight transition-colors duration-300">
+                    <p className="text-xl font-semibold mb-3 leading-tight transition-colors duration-300 text-accent">
                       {course.title}
                     </p>
                     <div className="text-right">
