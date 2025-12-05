@@ -652,9 +652,9 @@ const IoTCourse = () => {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {projects.map((project, index) => <Card key={index} className="card-hover">
-                                <CardContent className="p-6 mx-0 border px-[2px] pb-0 pl-[2px] pr-0 my-0 pt-[2px] shadow">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 border-0">
+                        {projects.map((project, index) => <Card key={index} className="card-hover my-0 mx-0 px-[24px] py-[2px] pr-[5px] mt-[2px] mr-[10px] mb-px pt-0 pl-[5px] pb-0 border-teal-400">
+                                <CardContent className="p-6 pb-0 pl-[2px] pr-0 pt-[2px] border-0 px-[24px] py-[24px] mx-[7px] my-[5px] border-none shadow-none">
                                     
                                     <h3 className="text-xl font-bold mb-3">
                                         {project.title}
