@@ -160,7 +160,7 @@ const IoTCourse = () => {
   return <div className="min-h-screen  from-background via-primary/5 to-accent/10">
             {/* Sticky Header */}
             <div className="fixed top-16 md:top-20 w-full bg-background/80 backdrop-blur-lg border-b border-border/50 z-40">
-                <div className="container-custom py-4">
+                <div className="container-custom py-4 bg-teal-50">
                     <div className="flex items-center justify-between">
                         <div>
                             <h1 className="text-xl font-bold text-accent">AI + INDUSTRIAL IoT ENGINEER Program</h1>
@@ -198,7 +198,7 @@ const IoTCourse = () => {
 
                             <h1 className="text-4xl md:text-5xl font-bold font-bebasNue mb-6">
                                 Become an{" "}
-                                <span className="gradient-text">AI INDUSTRIAL IoT ENGINEER</span>{" "}
+                                <span className="gradient-text">INDUSTRIAL IoT ENGINEER</span>{" "}
                                 in 2.5 Months
                             </h1>
 
@@ -405,14 +405,8 @@ const IoTCourse = () => {
                                                         <Code className="w-6 h-6 text-[#ff5f45]" />
                                                     </div>
                                                     <div>
-                                                        <h4 className="font-bold text-lg mb-2">
-                                                            Get Fluent with
-                                                            Embedded
-                                                        </h4>
-                                                        <p className="text-teal-300">
-                                                            Master networking +
-                                                            embedded basics
-                                                        </p>
+                                                        <h4 className="font-bold text-lg mb-2">Get Fluent with Embedded +AI</h4>
+                                                        <p className="text-teal-300">Master AI Integration + embedded basics</p>
                                                     </div>
                                                 </div>
                                             </div>
