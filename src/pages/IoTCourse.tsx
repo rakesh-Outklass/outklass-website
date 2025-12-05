@@ -379,7 +379,7 @@ const IoTCourse = () => {
                                             <h3 className="text-3xl font-bold font-poppins mb-4 flex items-center justify-center">
                                                 <Rocket className="w-8 h-8 mr-3 text-[#ff5f45]" />
                                                 🚀 The Real{" "}
-                                                <span className="gradient-text ml-2">
+                                                <span className="gradient-text ml-2 text-accent">
                                                     Transformation
                                                 </span>
                                             </h3>
@@ -667,7 +667,7 @@ const IoTCourse = () => {
                                     <h3 className="text-xl font-bold mb-3">
                                         {project.title}
                                     </h3>
-                                    <p className="text-muted-foreground mb-4">
+                                    <p className="mb-4 text-teal-200">
                                         {project.description}
                                     </p>
                                     <div className="flex flex-wrap gap-2">
