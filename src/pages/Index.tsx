@@ -234,7 +234,7 @@ const Index = () => {
             label: "Star Rating",
             icon: <Star className="w-5 h-5 text-yellow-500 inline ml-1" fill="currentColor" />
           }].map((stat, index) => <div key={index} className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-teal-primary flex items-center justify-center">
+                <div className="text-2xl md:text-3xl font-bold text-teal-primary flex items-center justify-center border-2 border-solid rounded-sm shadow-lg opacity-100 bg-accent">
                   {stat.value}
                   {stat.icon}
                 </div>

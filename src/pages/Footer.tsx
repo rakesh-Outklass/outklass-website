@@ -70,7 +70,7 @@ const Footer = () => {
             <div>
               <h4 className="font-bold mb-4 text-accent">Support</h4>
               <div className="space-y-2 text-sm text-primary-foreground">
-                <div>Email: hello@outklass.com</div>
+                <div>Email: rakesh@outklass.com</div>
                 <div>Phone: +91 8838194157</div>
                 <div>WhatsApp: +91 8838194157</div>
               </div>
