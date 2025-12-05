@@ -141,20 +141,20 @@ const Index = () => {
   }];
   const testimonials = [{
     name: "Priya Sharma",
-    role: "DevOps Engineer at TCS",
-    content: " outklass transformed my career! From a CSE graduate with no practical skills to landing a DevOps role in 4 months.",
+    role: "IoT Engineer at TCS",
+    content: "outklass transformed my career! From an ECE graduate with no practical skills to landing an IoT role in 4 months. The hands-on ESP32 projects were game-changing!",
     rating: 5,
     image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
   }, {
     name: "Amit Kumar",
-    role: "IoT Developer at Wipro",
-    content: "The IoT program gave me hands-on experience with real devices. Now I'm building smart city solutions!",
+    role: "Embedded IoT Developer at Wipro",
+    content: "The Industrial IoT program gave me hands-on experience with real devices, MQTT protocols, and cloud integration. Now I'm building smart factory solutions!",
     rating: 5,
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
   }, {
     name: "Sneha Patel",
-    role: "Cloud Engineer at Infosys",
-    content: "Best decision ever! The placement support was incredible. Got 3 job offers within 2 weeks of graduation.",
+    role: "IoT Solutions Engineer at Infosys",
+    content: "Best decision ever! The sensor integration and Arduino projects prepared me for real industry challenges. Got 3 job offers within 2 weeks of completing the program.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
   }];
