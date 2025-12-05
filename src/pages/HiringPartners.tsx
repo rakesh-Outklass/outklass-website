@@ -27,10 +27,9 @@ const HiringPartners = () => {
   return <section className="pt-15">
       <div className="container-custom mx-0 my-0">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
-            Our <span className="gradient-text">Accreditions</span>
+          <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4 text-primary">Minds Behind The Curriculum
           </h2>
-          <p className="text-xl mb-2 text-primary">Backed by</p>
+          
           <p className="text-2xl bg-inherit text-accent md:text-5xl">
             <AnimatedText className="text-accent" />
           </p>
