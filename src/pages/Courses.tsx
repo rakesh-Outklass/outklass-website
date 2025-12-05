@@ -87,7 +87,7 @@ const CourseCard = memo(({
             </> :
         // Active Course Card Layout
         <>
-              <div className="relative p-6 text-white overflow-hidden border-b border-white/20 h-[228px] bg-gradient-to-br from-teal-primary to-teal-dark">
+              <div className="relative p-6 text-white overflow-hidden border-b border-white/20 h-[228px] bg-gradient-to-br from-teal-primary to-teal-dark my-0 mx-0 px-[30px] py-[40px]">
                 <div className="relative z-10">
                   <div className="flex justify-between items-start mb-4">
                     <div className="flex items-center space-x-3">
