@@ -225,21 +225,19 @@ const Index = () => {
           Trusted by Thousands, Backed by Results
         </p>
         <div className="section-padding container-custom relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-2 gap-6 mb-12 max-w-md mx-auto">
             {[{
             value: "4,500+",
             label: "Students Trained"
           }, {
-            value: "85%",
-            label: "Placement Rate"
-          }, {
-            value: "50+",
-            label: "Hiring Partners"
-          }, {
-            value: "₹5.5 LPA",
-            label: "Avg. Package"
+            value: "4.8/5",
+            label: "Star Rating",
+            icon: <Star className="w-5 h-5 text-yellow-500 inline ml-1" fill="currentColor" />
           }].map((stat, index) => <div key={index} className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-teal-primary">{stat.value}</div>
+                <div className="text-2xl md:text-3xl font-bold text-teal-primary flex items-center justify-center">
+                  {stat.value}
+                  {stat.icon}
+                </div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>)}
           </div>
