@@ -31,12 +31,12 @@ const Contact = () => {
   const contactInfo = [{
     icon: <Phone className="w-6 h-6" />,
     title: "Phone",
-    details: ["+91 98765 43210", "+91 87654 32109"],
+    details: ["+91 8838194157"],
     action: "Call Now"
   }, {
     icon: <Mail className="w-6 h-6" />,
     title: "Email",
-    details: ["hello@ outklass.com", "support@ outklass.com"],
+    details: ["support@outklass.com"],
     action: "Email Us"
   }, {
     icon: <MapPin className="w-6 h-6" />,
