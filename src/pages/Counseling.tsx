@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Send } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 type ContactModalProps = {
   defaultCourse?: string;
@@ -23,6 +24,7 @@ export default function Counseling({
   defaultDate = "",
   triggerContent,
 }: ContactModalProps) {
+  const { toast } = useToast();
   const [open, setOpen] = useState(false);
   const [course, setCourse] = useState(defaultCourse);
   const [date, setDate] = useState(defaultDate);
@@ -64,7 +66,7 @@ export default function Counseling({
     setOpen(false);
 
     const url =
-      "https://script.google.com/macros/s/AKfycbx0xPHL8VHHrl64gF7Jgnf8v-nkxH9unuqx2X-6WGQfL6HZuhhb8-ekh_7VBC7d6lc3/exec";
+      "https://script.google.com/macros/s/AKfycbzCtv2ZuwNvJB6HHeTxd3prigCKTFA0jFWCAql74T_e6l7Nzuvd-AUbwgCPk3CvXEvtcg/exec";
 
     const target = e.target as typeof e.target & {
       name: { value: string };
@@ -72,7 +74,7 @@ export default function Counseling({
       phone: { value: string };
       date: { value: string };
       course: { value: string };
-      message:{value: string};
+      message: { value: string };
     };
 
     fetch(url, {
@@ -87,12 +89,21 @@ export default function Counseling({
       )}&Message=${encodeURIComponent(target.message.value)}`,
     })
       .then((res) => res.text())
-      .then((data) => {
-        alert(data);
-        e.currentTarget.reset();
-        setPhone("+91"); // Reset phone after submit
+      .then(() => {
+        toast({
+          title: "Message Sent Successfully!",
+          description: "We'll get back to you within 24 hours.",
+        });
+        setPhone("+91");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+      });
   };
 
   return (

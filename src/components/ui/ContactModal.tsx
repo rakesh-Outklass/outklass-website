@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Send } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 type ContactModalProps = {
   defaultCourse?: string;
@@ -21,6 +22,7 @@ export default function ContactModal({
   defaultCourse = "",
   triggerContent,
 }: ContactModalProps) {
+  const { toast } = useToast();
   const [open, setOpen] = useState(false);
   const [course, setCourse] = useState(defaultCourse);
 
@@ -56,7 +58,7 @@ export default function ContactModal({
     setOpen(false);
 
     const url =
-      "https://script.google.com/macros/s/AKfycbwkUN0LakdOPVwgh2MeuQoZyAoK2YDYD_7o9W_uKvH4Fj31wrdytNC5KHPEhUTutBrr/exec";
+      "https://script.google.com/macros/s/AKfycbzCtv2ZuwNvJB6HHeTxd3prigCKTFA0jFWCAql74T_e6l7Nzuvd-AUbwgCPk3CvXEvtcg/exec";
 
     const target = e.target as typeof e.target & {
       name: { value: string };
@@ -78,12 +80,21 @@ export default function ContactModal({
       )}&Message=${encodeURIComponent(target.message.value)}`,
     })
       .then((res) => res.text())
-      .then((data) => {
-        alert(data);
-        e.currentTarget.reset();
-        setPhone("+91"); // Reset phone after submit
+      .then(() => {
+        toast({
+          title: "Message Sent Successfully!",
+          description: "We'll get back to you within 24 hours.",
+        });
+        setPhone("+91");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+      });
   };
 
   return (
