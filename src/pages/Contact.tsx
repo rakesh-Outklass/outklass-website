@@ -207,7 +207,7 @@ const Contact = () => {
                                                 <label className="block text-sm font-medium mb-4">
                                                     Interested Course
                                                 </label>
-                                                <select name="course" value={formData.course} onChange={handleChange} className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:border-primary hover:border-primary/50 transition-colors duration-300 bg-background mb-10">
+                                                <select name="course" value={formData.course} onChange={handleChange} className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:border-primary hover:border-primary/50 transition-colors duration-300 bg-background mb-10 text-muted-foreground">
                                                     <option value="">
                                                         Select a course
                                                     </option>
