@@ -543,7 +543,7 @@ const IoTCourse = () => {
                                                 <h3 className="font-bold mb-2">
                                                     {tool.name}
                                                 </h3>
-                                                <p className="text-sm text-muted-foreground">
+                                                <p className="text-sm text-teal-200">
                                                     {tool.description}
                                                 </p>
                                             </CardContent>
@@ -568,7 +568,7 @@ const IoTCourse = () => {
                                                 <h3 className="font-bold mb-2">
                                                     {tool.name}
                                                 </h3>
-                                                <p className="text-sm text-muted-foreground">
+                                                <p className="text-sm text-teal-200">
                                                     {tool.description}
                                                 </p>
                                             </CardContent>
@@ -593,7 +593,7 @@ const IoTCourse = () => {
                                                 <h3 className="font-bold mb-2">
                                                     {tool.name}
                                                 </h3>
-                                                <p className="text-sm text-muted-foreground">
+                                                <p className="text-sm text-teal-300">
                                                     {tool.description}
                                                 </p>
                                             </CardContent>
