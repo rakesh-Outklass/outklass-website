@@ -67,18 +67,18 @@ export default function EventWorkshop({
       course: { value: string };
     };
 
+    const formData = new FormData();
+    formData.append("Name", target.name.value);
+    formData.append("Email", target.email.value);
+    formData.append("Phone", phone);
+    formData.append("Date", target.date.value);
+    formData.append("Course", target.course.value);
+
     fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: `Name=${encodeURIComponent(
-        target.name.value
-      )}&Email=${encodeURIComponent(
-        target.email.value
-      )}&Phone=${encodeURIComponent(phone)}&Date=${encodeURIComponent(
-        target.date.value
-      )}&Course=${encodeURIComponent(target.course.value)}`,
+      mode: "no-cors",
+      body: formData,
     })
-      .then((res) => res.text())
       .then(() => {
         toast({
           title: "Message Sent Successfully!",
@@ -87,7 +87,7 @@ export default function EventWorkshop({
         setPhone("+91");
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error);
         toast({
           title: "Error",
           description: "Something went wrong. Please try again.",

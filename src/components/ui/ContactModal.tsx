@@ -68,18 +68,18 @@ export default function ContactModal({
       message: { value: string };
     };
 
+    const formData = new FormData();
+    formData.append("Name", target.name.value);
+    formData.append("Email", target.email.value);
+    formData.append("Phone", phone);
+    formData.append("Course", target.course.value);
+    formData.append("Message", target.message.value);
+
     fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: `Name=${encodeURIComponent(
-        target.name.value
-      )}&Email=${encodeURIComponent(
-        target.email.value
-      )}&Phone=${encodeURIComponent(phone)}&Course=${encodeURIComponent(
-        target.course.value
-      )}&Message=${encodeURIComponent(target.message.value)}`,
+      mode: "no-cors",
+      body: formData,
     })
-      .then((res) => res.text())
       .then(() => {
         toast({
           title: "Message Sent Successfully!",
@@ -88,7 +88,7 @@ export default function ContactModal({
         setPhone("+91");
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error);
         toast({
           title: "Error",
           description: "Something went wrong. Please try again.",
