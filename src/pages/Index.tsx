@@ -171,7 +171,7 @@ const Index = () => {
         duration: 0.8,
         ease: "easeOut"
       }} className="w-full max-w-4xl px-6 text-center mx-0 ml-[5px] mt-0 mr-px">
-          <h1 className="text-3xl md:text-5xl font-poppins tracking-tight mb-6 leading-tight text-center font-semibold mx-0 my-0 px-0 py-0 md:mb-0 ml-0 lg:text-7xl text-primary-foreground">Building India's Next Gen Engineers        
+          <h1 className="text-3xl md:text-5xl font-poppins tracking-tight mb-6 leading-tight font-semibold mx-0 my-0 px-0 py-0 md:mb-0 ml-0 lg:text-7xl text-primary-foreground text-center">Building India's Next Gen Engineers        
           <br />
             
           </h1>
