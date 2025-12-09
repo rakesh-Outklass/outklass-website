@@ -71,7 +71,7 @@ const Navigation = () => {
 
                         {/* Desktop Navigation */}
                         <div className="hidden lg:flex gap-3">
-                            <div className="nav-container border-teal-200">
+                            <div className="nav-container border-teal-200 bg-inherit">
                         {navItems.slice(0, 5).map(item => <div key={item.name} className="relative space-x-4">
                                         <button onClick={() => navigate(item.path)} className={`nav-pill ${normalizePath(location.pathname) === normalizePath(item.path) ? "active" : ""} text-white hover:text-white`}>
                                             <span>{item.name}</span>
