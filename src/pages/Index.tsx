@@ -224,7 +224,7 @@ const Index = () => {
         <p className="text-center text-xl text-muted-foreground">
           Trusted by Thousands, Backed by Results
         </p>
-        <div className="section-padding container-custom relative z-10 py-[12px] my-[6px] px-[5px]">
+        <div className="section-padding container-custom relative z-10 py-[12px] px-[5px] my-[5px]">
           <div className="grid grid-cols-2 gap-6 mb-12 max-w-md mx-auto">
             {[{
             value: "4,500+",
