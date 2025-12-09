@@ -44,9 +44,16 @@
         scroll-behavior: smooth;
     }
 
-    /* Hero Section Fractal Glass Background */
+    /* Hero Section Digital Background */
     .hero-digital-bg {
-        background: linear-gradient(135deg, hsl(180, 100%, 22%) 0%, hsl(180, 100%, 18%) 50%, hsl(180, 100%, 14%) 100%);
+        background: 
+            radial-gradient(ellipse 700px 500px at 15% 20%, hsla(180, 80%, 50%, 0.35) 0%, transparent 55%),
+            radial-gradient(ellipse 600px 450px at 85% 75%, hsla(175, 70%, 45%, 0.3) 0%, transparent 50%),
+            radial-gradient(ellipse 500px 400px at 50% 50%, hsla(185, 90%, 45%, 0.25) 0%, transparent 45%),
+            radial-gradient(ellipse 400px 300px at 75% 25%, hsla(170, 80%, 50%, 0.28) 0%, transparent 45%),
+            radial-gradient(ellipse 450px 350px at 25% 80%, hsla(180, 75%, 48%, 0.25) 0%, transparent 45%),
+            radial-gradient(ellipse 350px 250px at 60% 15%, hsla(178, 85%, 42%, 0.22) 0%, transparent 50%),
+            linear-gradient(135deg, hsl(180, 100%, 25%) 0%, hsl(180, 100%, 20%) 50%, hsl(180, 100%, 15%) 100%);
         position: relative;
         overflow: hidden;
     }
@@ -59,34 +66,16 @@
         right: 0;
         bottom: 0;
         background: 
-            /* Fractal glass panels */
-            linear-gradient(120deg, hsla(180, 60%, 50%, 0.08) 0%, transparent 50%),
-            linear-gradient(240deg, hsla(175, 60%, 45%, 0.06) 0%, transparent 50%),
-            linear-gradient(60deg, hsla(185, 60%, 50%, 0.07) 0%, transparent 45%),
-            linear-gradient(300deg, hsla(178, 55%, 48%, 0.05) 0%, transparent 40%);
+            radial-gradient(circle 4px at 20% 30%, hsla(180, 80%, 70%, 0.7) 0%, transparent 100%),
+            radial-gradient(circle 3px at 80% 20%, hsla(175, 70%, 65%, 0.6) 0%, transparent 100%),
+            radial-gradient(circle 3px at 60% 70%, hsla(185, 80%, 60%, 0.5) 0%, transparent 100%),
+            radial-gradient(circle 4px at 35% 85%, hsla(178, 75%, 65%, 0.6) 0%, transparent 100%),
+            radial-gradient(circle 3px at 90% 60%, hsla(172, 70%, 70%, 0.5) 0%, transparent 100%),
+            radial-gradient(circle 3px at 10% 70%, hsla(180, 75%, 65%, 0.55) 0%, transparent 100%),
+            radial-gradient(circle 4px at 70% 40%, hsla(176, 80%, 70%, 0.6) 0%, transparent 100%),
+            radial-gradient(circle 3px at 45% 15%, hsla(182, 70%, 60%, 0.5) 0%, transparent 100%);
         pointer-events: none;
         z-index: 1;
-    }
-    
-    .hero-digital-bg::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: 
-            /* Subtle glass shards / fractal edges */
-            conic-gradient(from 0deg at 20% 30%, transparent 0deg, hsla(180, 50%, 55%, 0.04) 30deg, transparent 60deg),
-            conic-gradient(from 120deg at 80% 25%, transparent 0deg, hsla(175, 50%, 50%, 0.035) 25deg, transparent 50deg),
-            conic-gradient(from 200deg at 70% 70%, transparent 0deg, hsla(178, 50%, 52%, 0.04) 35deg, transparent 70deg),
-            conic-gradient(from 280deg at 30% 80%, transparent 0deg, hsla(182, 50%, 48%, 0.03) 20deg, transparent 45deg),
-            conic-gradient(from 45deg at 50% 50%, transparent 0deg, hsla(180, 45%, 55%, 0.025) 15deg, transparent 30deg),
-            /* Soft glass reflections */
-            linear-gradient(135deg, transparent 0%, hsla(180, 40%, 60%, 0.03) 25%, transparent 50%),
-            linear-gradient(315deg, transparent 0%, hsla(175, 40%, 55%, 0.025) 30%, transparent 55%);
-        pointer-events: none;
-        z-index: 2;
     }
 
     /* Flickering OUTKLASS Text Animation */
