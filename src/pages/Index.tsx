@@ -227,7 +227,7 @@ const Index = () => {
               <img 
                 src={heroEngineer} 
                 alt="Futuristic engineer working on industrial automation"
-                className="w-full h-[600px] object-cover rounded-2xl shadow-2xl"
+                className="w-full h-[450px] object-cover rounded-2xl shadow-2xl"
               />
               {/* Glow effect */}
               <div className="absolute -inset-4 bg-accent/20 blur-3xl -z-10 rounded-full" />
