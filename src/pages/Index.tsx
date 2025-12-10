@@ -9,7 +9,7 @@ import ContactModal from "@/components/ui/ContactModal";
 import HiringPartners from "./HiringPartners";
 import TextReveal from "../components/ui/TextReveal";
 import heroTechObject from "../assets/hero-tech-object.png";
-import heroEngineer from "../assets/hero-engineer.jpg";
+import heroEngineer from "../assets/hero-engineer.png";
 import { motion } from "framer-motion";
 const Index = () => {
   const [visibleSection, setVisibleSection] = useState("");
