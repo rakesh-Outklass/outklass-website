@@ -86,7 +86,7 @@ const Navigation = () => {
                                 Download Brochure
                             </Button>
                             <Link to={"/events"}>
-                                <Button className="btn-glow hover:scale-105 transition-all duration-300 animate-neon-pulse">
+                                <Button className="btn-glow hover:scale-105 transition-all duration-2000 animate-neon-pulse">
                                     Join Free Workshop
                                 </Button>
                             </Link>

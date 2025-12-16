@@ -9,7 +9,8 @@ import ContactModal from "@/components/ui/ContactModal";
 import HiringPartners from "./HiringPartners";
 import TextReveal from "../components/ui/TextReveal";
 import heroTechObject from "../assets/hero-tech-object.png";
-import heroEngineer from "../assets/hero-engineer.png";
+import heroEngineer from "../assets/hero-engineer-removebg-preview.png";
+import IOTimage from "../assets/Shaping the Future of AI Agents_ Development Strategies and Emerging Trends.jpeg"
 import { motion } from "framer-motion";
 const Index = () => {
   const [visibleSection, setVisibleSection] = useState("");
@@ -102,16 +103,16 @@ const Index = () => {
   // ];
 
   const benefits = [{
-    icon: <Award className="w-6 h-6" />,
+    icon: <Award className="w-8 h-8" />,
     text: "100% Placement Assistance"
   }, {
-    icon: <Code className="w-6 h-6" />,
+    icon: <Code className="w-8 h-8" />,
     text: "Real Industry Projects"
   }, {
-    icon: <Users className="w-6 h-6" />,
+    icon: <Users className="w-8 h-8" />,
     text: "Industry Expert Training"
   }, {
-    icon: <Briefcase className="w-6 h-6" />,
+    icon: <Briefcase className="w-8 h-8" />,
     text: "Career-Tailored Curriculum"
   }];
   const isFilled = true;
@@ -159,21 +160,28 @@ const Index = () => {
     rating: 5,
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
   }];
-  return <div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen hero-digital-bg flex items-center overflow-hidden">
+      {/* <section className="relative min-h-screen hero-digital-bg flex items-center overflow-hidden"> */}
+      <section className="relative hero-digital-bg flex items-center overflow-hidden">
         <div className="container-custom w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-16 lg:py-0">
           {/* Left Content */}
-          <motion.div initial={{
-            opacity: 0,
-            x: -50
-          }} animate={{
-            opacity: 1,
-            x: 0
-          }} transition={{
-            duration: 0.8,
-            ease: "easeOut"
-          }} className="text-left z-10">
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -50,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+            }}
+            className="text-left z-10"
+          >
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-poppins tracking-tight mb-6 leading-tight font-semibold text-primary-foreground">
               Building India's Next Gen Engineers
             </h1>
@@ -188,9 +196,11 @@ const Index = () => {
               in Next-Gen Tech
             </p>
             <p className="text-base mb-8 font-poppins text-primary-foreground md:text-lg">
-              Where tomorrow's Industry 4.0 innovators get trained, mentored, and transformed. No shortcuts — just mastery, projects, and proof of skill.
+              Where tomorrow's Industry 4.0 innovators get trained, mentored,
+              and transformed. No shortcuts — just mastery, projects, and proof
+              of skill.
             </p>
-            
+
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-5 md:gap-6">
               <Link to={"/events"}>
@@ -201,7 +211,11 @@ const Index = () => {
               </Link>
 
               <Link to="/courses">
-                <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-2 border-white text-white bg-transparent hover:bg-white hover:text-teal-primary transition-all duration-300">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="text-lg px-8 py-4 border-2 border-white text-white bg-transparent hover:bg-white hover:text-teal-primary transition-all duration-300"
+                >
                   Explore Programs
                 </Button>
               </Link>
@@ -209,25 +223,40 @@ const Index = () => {
           </motion.div>
 
           {/* Right Image */}
-          <motion.div initial={{
-            opacity: 0,
-            x: 50
-          }} animate={{
-            opacity: 1,
-            x: 0
-          }} transition={{
-            duration: 0.8,
-            ease: "easeOut",
-            delay: 0.2
-          }} className="relative hidden lg:block">
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: 50,
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+              delay: 0.2,
+            }}
+            className="relative hidden lg:block"
+          >
             <div className="relative">
               {/* Blended overlay effect */}
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-teal-primary/60 z-10 rounded-2xl" />
-              <div className="absolute inset-0 bg-gradient-to-t from-teal-primary/40 via-transparent to-transparent z-10 rounded-2xl" />
-              <img 
-                src={heroEngineer} 
+              {/* <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-teal-primary/60 z-10 rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-t from-teal-primary/40 via-transparent to-transparent z-10 rounded-2xl" /> */}
+              <img
+                src={heroEngineer}
                 alt="Futuristic engineer working on industrial automation"
-                className="w-full h-[450px] object-cover rounded-2xl shadow-2xl"
+                className="
+      relative
+      z-10
+      w-[520px]
+      xl:w-[620px]
+      2xl:w-[700px]
+      max-w-none
+      -translate-x-10
+      drop-shadow-[0_40px_80px_rgba(0,0,0,0.35)]
+      hero-image-mask
+    "
               />
               {/* Glow effect */}
               <div className="absolute -inset-4 bg-accent/20 blur-3xl -z-10 rounded-full" />
@@ -235,19 +264,25 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
-      <motion.section initial={{
-      opacity: 0,
-      y: 50
-    }} whileInView={{
-      opacity: 1,
-      y: 0
-    }} viewport={{
-      once: false,
-      amount: 0.3
-    }} transition={{
-      duration: 0.6,
-      ease: "easeOut"
-    }} className="pt-20">
+      <motion.section
+        initial={{
+          opacity: 0,
+          y: 50,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: false,
+          amount: 0.3,
+        }}
+        transition={{
+          duration: 0.6,
+          ease: "easeOut",
+        }}
+        className="pt-20"
+      >
         {" "}
         <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-3 text-center">
           Why - <span className="gradient-text">Choose us</span>
@@ -255,8 +290,8 @@ const Index = () => {
         <p className="text-center text-xl text-muted-foreground">
           Trusted by Thousands, Backed by Results
         </p>
-        <div className="section-padding container-custom relative z-10 py-[12px] px-[5px] my-[6px]">
-          <div className="grid grid-cols-2 gap-6 mb-12 max-w-md mx-auto">
+        <div className="section-padding-choseus container-custom relative z-10 py-[12px] px-[5px] my-[6px]">
+          {/* <div className="grid grid-cols-2 gap-6 mb-12 max-w-md mx-auto">
             {[{
             value: "4,500+",
             label: "Students Trained"
@@ -271,285 +306,406 @@ const Index = () => {
                 </div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>)}
-          </div>
+          </div> */}
 
           {/* Benefits Row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {benefits.map((benefit, index) => <motion.div key={index} initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: false
-          }} transition={{
-            duration: 0.5,
-            delay: index * 0.1
-          }} className="glassmorphic-card group bg-teal-primary/90 backdrop-blur-sm">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 30,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: false,
+                }}
+                transition={{
+                  duration: 0,
+                  delay: index * 0.1,
+                }}
+                className="glassmorphic-card group bg-teal-primary/90 backdrop-blur-sm"
+              >
                 <div className="text-blinkpath-orange mb-3 group-hover:scale-110 transition-transform duration-300">
                   {benefit.icon}
                 </div>
                 <span className="text-sm font-medium text-white/90">
                   {benefit.text}
                 </span>
-              </motion.div>)}
+              </motion.div>
+            ))}
           </div>
         </div>
       </motion.section>
 
-      <motion.div initial={{
-      opacity: 0
-    }} whileInView={{
-      opacity: 1
-    }} viewport={{
-      once: false,
-      amount: 0.5
-    }} transition={{
-      duration: 0.6
-    }} className="pb-10 my-0 mt-0 pt-0">
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        viewport={{
+          once: false,
+          amount: 0.5,
+        }}
+        transition={{
+          duration: 0.6,
+        }}
+        className=" my-0 mt-0 pt-0"
+      >
         <HiringPartners />
       </motion.div>
 
       {/* Career Support Section */}
-      <motion.section initial={{
-      opacity: 0,
-      y: 50
-    }} whileInView={{
-      opacity: 1,
-      y: 0
-    }} viewport={{
-      once: false,
-      amount: 0.2
-    }} transition={{
-      duration: 0.6,
-      ease: "easeOut"
-    }} className="section-padding bg-emerald-100">
-        <div className="container-custom">
-          <motion.div initial={{
+      <motion.section
+        initial={{
           opacity: 0,
-          y: 30
-        }} whileInView={{
+          y: 50,
+        }}
+        whileInView={{
           opacity: 1,
-          y: 0
-        }} viewport={{
-          once: false
-        }} transition={{
-          duration: 0.5
-        }} className="text-center max-w-4xl mx-auto mb-16">
+          y: 0,
+        }}
+        viewport={{
+          once: false,
+          amount: 0.2,
+        }}
+        transition={{
+          duration: 0.6,
+          ease: "easeOut",
+        }}
+        className="section-padding"
+      >
+        <div className="container-custom">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: false,
+            }}
+            transition={{
+              duration: 0.5,
+            }}
+            className="text-center max-w-4xl mx-auto mb-16"
+          >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-poppins mb-6">
               We Don't Just Train —{" "}
               <span className="gradient-text">
-                ​We make you deployment ready     
+                ​We make you deployment ready
               </span>
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Comprehensive career support from resume building to
-              salary negotiation
+              Comprehensive career support from resume building to salary
+              negotiation
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {supportSteps.map((step, index) => <motion.div key={index} initial={{
-            opacity: 0,
-            y: 50
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: false
-          }} transition={{
-            duration: 0.5,
-            delay: index * 0.1
-          }}>
-                <Card className="card-hover text-center relative overflow-hidden h-full">
-                  <div className="absolute top-4 right-4 text-6xl font-bold text-white/10">
+            {supportSteps.map((step, index) => (
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: false,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
+              >
+                <Card className="glassmorphic-card text-center relative overflow-hidden h-full">
+                  <div className="absolute top-4 right-4 text-2xl font-bold text-white">
                     {step.step}
                   </div>
-                  <CardContent className="p-8 relative z-10 bg-inherit">
+                  <CardContent className="p-6 relative z-10">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 text-white rounded-lg mb-6">
                       {step.icon}
                     </div>
                     <h3 className="text-xl font-bold mb-4 text-white">
                       {step.title}
                     </h3>
-                    
+
                     <div className="space-y-2">
-                      {step.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center text-sm text-white/90 my-0 px-0">
-                            <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
-                            {feature}
-                          </div>)}
+                      {step.features.map((feature, featureIndex) => (
+                        <div
+                          key={featureIndex}
+                          className="flex items-center text-sm text-white/90 my-0 px-0"
+                        >
+                          <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+                          {feature}
+                        </div>
+                      ))}
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>)}
+              </motion.div>
+            ))}
           </div>
         </div>
       </motion.section>
 
       {/* Active Courses Section */}
-      <motion.section initial={{
-      opacity: 0,
-      y: 50
-    }} whileInView={{
-      opacity: 1,
-      y: 0
-    }} viewport={{
-      once: false,
-      amount: 0.2
-    }} transition={{
-      duration: 0.6,
-      ease: "easeOut"
-    }} id="active-courses" className="section-padding bg-teal-light bg-teal-100">
-        <div className="container-custom">
-          <motion.div initial={{
+      <motion.section
+        initial={{
           opacity: 0,
-          y: 30
-        }} whileInView={{
+          y: 50,
+        }}
+        whileInView={{
           opacity: 1,
-          y: 0
-        }} viewport={{
-          once: false
-        }} transition={{
-          duration: 0.5
-        }} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-3">
-              <span className="gradient-text">Live Programs</span> - Start
-              Today!
+          y: 0,
+        }}
+        viewport={{
+          once: false,
+          amount: 0.2,
+        }}
+        transition={{
+          duration: 0.6,
+          ease: "easeOut",
+        }}
+        id="active-courses"
+        className="section-padding bg-teal-light-newlvpg bg-teal-100"
+      >
+        <div className="container-custom mb-16">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: false,
+            }}
+            transition={{
+              duration: 0.5,
+            }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold font-poppins mb-3">
+              <span className="text-primary-foreground">Live Programs</span> -
+              Start Today!
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl .text-primary-foreground">
               Industry-ready training programs available now
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
-            {activeCourses.map((course, index) => <motion.div key={index} initial={{
-            opacity: 0,
-            y: 50
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: false
-          }} transition={{
-            duration: 0.5,
-            delay: index * 0.15
-          }} className="my-0 px-[50px] py-0 mx-[50px] border-teal-300">
-              <Card className="card-hover group h-full">
-                <CardContent className="p-8 border-primary-foreground border-0">
-                  <div className="flex items-start justify-between mb-6 relative p-3 overflow-hidden border-b border-teal-primary/20 py-0 px-px">
-                    {/* <div className="p-3 bg-primary/10 rounded-lg text-[#ff5f45] group-hover:scale-110 transition-transform duration-300">
+            {activeCourses.map((course, index) => (
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: false,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.15,
+                }}
+                className="my-0 px-[50px] py-0 mx-[50px] border-teal-300"
+              >
+                <Card className="group h-full p-0">
+                  <div className="new_livimgman">
+                     <img
+                src={IOTimage}
+                      alt="IOT Program"
+                    />
+                    <CardContent className="py-8 px-6 new_livp_crdman border-0">
+                      <div className="flex items-start justify-between mb-6 relative p-3 overflow-hidden border-b border-teal-primary/20 py-0 px-px">
+                        {/* <div className="p-3 bg-primary/10 rounded-lg text-[#ff5f45] group-hover:scale-110 transition-transform duration-300">
                       {course.icon}
                      </div> */}
-                    <p className="text-xl font-semibold mb-3 leading-tight transition-colors duration-300 text-accent">
-                      {course.title}
-                    </p>
-                    <div className="text-right">
-                      
-                      
-                      
-                    </div>
-                  </div>
+                        <p className="text-xl font-semibold mb-3 leading-tight transition-colors duration-300 text-accent text-primary-foreground">
+                          {course.title}
+                        </p>
+                        <div className="text-right"></div>
+                      </div>
 
-                  <p className="text-white/90 mb-6">
-                    {course.description}
-                  </p>
+                      <p className="text-white/90 mb-6">{course.description}</p>
 
-                  <div className="space-y-4 mb-6">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-white/80">Duration:</span>
-                      <span className="font-medium text-white">{course.duration}</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-white/80">Level:</span>
-                      <span className="font-medium text-white">{course.level}</span>
-                    </div>
-                  </div>
+                      <div className="space-y-4 mb-6">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-white/80">Duration:</span>
+                          <span className="font-medium text-white">
+                            {course.duration}
+                          </span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-white/80">Level:</span>
+                          <span className="font-medium text-white">
+                            {course.level}
+                          </span>
+                        </div>
+                      </div>
 
-                  <div className="mb-6">
-                    <div className="text-sm text-white/80 mb-2">
-                      Tools & Technologies:
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {course.tools.map((tool, toolIndex) => <span key={toolIndex} className="px-3 py-1 bg-white/20 text-white rounded-full text-sm font-medium">
-                          {tool}
-                        </span>)}
-                    </div>
-                  </div>
-                  <div className="flex  justify-between gap-4">
-                    <div className="">
-                      <ContactModal defaultCourse={course.title} />
-                    </div>
+                      {/* <div className="mb-6">
+                      <div className="text-sm text-white/80 mb-2">
+                        Tools & Technologies:
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {course.tools.map((tool, toolIndex) => (
+                          <span
+                            key={toolIndex}
+                            className="px-3 py-1 bg-white/20 text-white rounded-full text-sm font-medium"
+                          >
+                            {tool}
+                          </span>
+                        ))}
+                      </div>
+                    </div> */}
+                      <div className="flex  justify-between gap-4">
+                        <div className="">
+                          <ContactModal defaultCourse={course.title} />
+                        </div>
 
-                    <Link to={course.link}>
-                      <Button className="w-100 btn-glow group-hover:scale-[1.02] transition-transform duration-300">
-                        Know More
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </Button>
-                    </Link>
+                        <Link to={course.link}>
+                          <Button className="w-100 btn-glow group-hover:scale-[1.02] transition-transform duration-300">
+                            Know More
+                            <ArrowRight className="ml-2 w-4 h-4" />
+                          </Button>
+                        </Link>
+                      </div>
+                    </CardContent>
                   </div>
-                </CardContent>
-              </Card>
-            </motion.div>)}
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
+        <Link to="/courses" className="group block">
+          <div className="mx-auto max-w-4xl">
+            <div
+              className="
+          relative
+          flex
+          items-center
+          justify-center
+          gap-3
+          px-8
+          py-6
+          rounded-full
+          backdrop-blur-md
+          bg-white/10
+          border border-white/20
+          shadow-[0_20px_50px_rgba(0,0,0,0.15)]
+          transition-all
+          duration-300
+          group-hover:scale-[1.01]
+        "
+            >
+              <span className="text-lg md:text-xl font-semibold text-primary text-white">
+                Pick your <span className="text-accent">SUPERPOWER</span>
+              </span>
+
+              <span className=" text-lg hidden md:inline text-white">—</span>
+
+              <span className="text-lg md:text-xl font-medium text-primary group-hover:text-accent transition-colors text-white">
+                Browse all courses
+              </span>
+
+              {/* Arrow */}
+              <span
+                className="
+            ml-2
+            inline-flex
+            items-center
+            justify-center
+            w-8
+            h-8
+            rounded-full
+            bg-accent/90
+            text-white
+            transform
+            transition-all
+            duration-300
+            group-hover:translate-x-1
+          "
+              >
+                →
+              </span>
+
+              {/* Glow */}
+              <div className="absolute -inset-1 bg-accent/20 blur-2xl opacity-0 transition-opacity" />
+            </div>
+          </div>
+        </Link>
       </motion.section>
-      <motion.section initial={{
-      opacity: 0,
-      scale: 0.95
-    }} whileInView={{
-      opacity: 1,
-      scale: 1
-    }} viewport={{
-      once: false
-    }} transition={{
-      duration: 0.5
-    }} className="section-padding pt-0 text-center bg-teal-light my-0">
-        {" "}
-        {/* <div className="animation-btn">
-          <a href="#" className="neon-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Pick your super power
-          </a>
-         </div> */}
-        <div className="fancy mb-3">
-          <Link to="/courses">
-            <button type="button" className="btn btn-outline-info border-transparent text-base rounded-none my-0">
-              <span className="text-nowrap text-2xl mx-[10px] py-[10px] px-0">&quot;Pick your SUPERPOWER - Browse all courses &quot;</span>
-            </button>
-          </Link>
-        </div>
-      </motion.section>
+      {/* <motion.section
+        initial={{ opacity: 0, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0, ease: "easeOut" }}
+        className="section-padding pt-0 my-0 bg-teal-light-newlvpg "
+      >
+      
+      </motion.section> */}
 
       {/* Testimonials Section */}
-      <motion.section initial={{
-      opacity: 0,
-      y: 50
-    }} whileInView={{
-      opacity: 1,
-      y: 0
-    }} viewport={{
-      once: false,
-      amount: 0.2
-    }} transition={{
-      duration: 0.6,
-      ease: "easeOut"
-    }} id="testimonials" className="section-padding bg-white">
-        <div className="container-custom">
-          <motion.div initial={{
+      <motion.section
+        initial={{
           opacity: 0,
-          y: 30
-        }} whileInView={{
+          y: 50,
+        }}
+        whileInView={{
           opacity: 1,
-          y: 0
-        }} viewport={{
-          once: false
-        }} transition={{
-          duration: 0.5
-        }} className="text-center mb-16">
+          y: 0,
+        }}
+        viewport={{
+          once: false,
+          amount: 0.2,
+        }}
+        transition={{
+          duration: 0.6,
+          ease: "easeOut",
+        }}
+        id="testimonials"
+        className="section-padding bg-white"
+      >
+        <div className="container-custom">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: false,
+            }}
+            transition={{
+              duration: 0.5,
+            }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
               Success Stories from{" "}
               <span className="gradient-text"> outklass Graduates</span>
@@ -559,41 +715,55 @@ const Index = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => <motion.div key={index} initial={{
-            opacity: 0,
-            y: 40
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: false
-          }} transition={{
-            duration: 0.5,
-            delay: index * 0.15
-          }}>
-              <Card className="card-hover group h-full">
-                <CardContent className="p-6 bg-primary-foreground">
-                  <div className="flex items-center mb-4">
-                    
-                    <div>
-                      <div className="font-bold text-primary">{testimonial.name}</div>
-                      <div className="text-sm text-blinkpath-orange">
-                        {testimonial.role}
+          <div className="grid md:grid-cols-3 gap-8 h-100">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: false,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.15,
+                }}
+              >
+                <Card className="nwrev_nw_tpp h-full h-full">
+                  <CardContent className="nwrev_nw p-6 bg-primary-foreground h-full w-full">
+                    <div className="flex items-center mb-4">
+                      <div>
+                        <div className="font-bold text-primary">
+                          {testimonial.name}
+                        </div>
+                        <div className="text-sm text-blinkpath-orange">
+                          {testimonial.role}
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
-                  </div>
+                    <div className="flex mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                        />
+                      ))}
+                    </div>
 
-                  <p className="italic text-accent bg-inherit text-xs">
-                    "{testimonial.content}"
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>)}
+                    <p className="italic text-accent bg-inherit text-xs">
+                      "{testimonial.content}"
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </motion.section>
@@ -601,6 +771,7 @@ const Index = () => {
       <div className="">
         <Footer />
       </div>
-    </div>;
+    </div>
+  );
 };
 export default Index;
