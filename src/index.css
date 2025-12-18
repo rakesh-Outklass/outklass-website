@@ -547,6 +547,34 @@
 .btn-glow:hover::before {
   @apply translate-x-[100%];
 }
+.btn-glow-newinters {
+  @apply relative overflow-hidden text-white font-semibold;
+  background: transparent;
+  transition: all 0.3s ease;
+  color: #008080;
+  border: 1px solid #008080;
+}
+
+.btn-glow-newinters:hover {
+  /* box-shadow: 0 6px 24px hsla(12, 100%, 64%, 0.4),
+    0 4px 12px hsla(0, 0%, 0%, 0.15); */
+    box-shadow: none !important;
+  background: hsl(12, 100%, 60%);
+  /* @apply transform scale-105; */
+  color: #FFFFFF;
+}
+.btn-glow.btn-glow-newinters-frgl:hover {
+  transform: scale(1) !important;
+}
+
+.btn-glow-newinters::before {
+  content: "";
+  @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] transition-transform duration-700;
+}
+
+.btn-glow-newinters:hover::before {
+  @apply translate-x-[100%];
+}
 
 /* Superpower CTA - animated gradient + shine */
 .superpower-cta {
@@ -996,7 +1024,7 @@
     border-top-left-radius: 16px;
 }
 .hover\:shadow-\[0_0_30px_rgba\(20\2c 184\2c 166\2c 0\.5\)\]:hover {
-    --tw-shadow : 0 !important;
+    --tw-shadow : 0px !important;
 }
 .nwrev_nw_tpp {
   border: 2px solid hsl(var(--primary));
@@ -1011,4 +1039,127 @@
 .nwrev_nw:hover {
     box-shadow: 0 30px 70px rgba(0, 0, 0, 0.18) !important;
 }
+.btn-glow-newinters-frgl {
+  padding: 14px 20px !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+}
+.live_head_son {
+  padding: 18px 30px ;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  /* display: flex;
+  justify-content: space-around; */
+}
+.section-padding.nomar-crse {
+  margin: auto 0px !important;
+  padding: 50px 0px !important;
+}
+.container-custom.nomar-crse-cuscon {
+  margin: 0px;
+  max-width: 100%;
+}
+.container-custom.nomar-inncse-cuscon {
+  margin: 0px 80px;
+  max-width: 100%;
+}
+.gradient-moving-text {
+  background: linear-gradient(
+    90deg,
+    #008080 0%,
+    #008080 30%,
+    #ff6c47 50%,
+    #008080 70%,
+    #008080 100%
+  );
+  background-size: 300% 100%;
+  background-position: 0% center;
 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  animation: gradient-move 5s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(255, 108, 71, 0.25));
+}
+
+/* Smooth left → right motion */
+@keyframes gradient-move {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 300% center;
+  }
+}
+
+.card-3d.dec_wrp:hover {
+  transform: scale(1) !important;
+}
+.perf_incse {
+  background-color: #008080bf;
+  color: #FFFFFF;
+}
+.text-nowwecrt {
+  color: #ffffffa7;
+}
+.newtab_hvrbd {
+  padding: 10px 0px;
+}
+.newtab_hvrbd:hover {
+  background-color: #0080803e !important;
+  border-radius: 12px;
+}
+.data-\[state\=active\]\:bg-blinkpath-orange[data-state="active"].newtab_hvrbd:hover {
+background-color: #ff6c47 !important;
+}
+.courabt_shrp {
+  border-radius: 12px;
+}
+.cour_itabt_mel:hover .cour_itabt_keel > div ,
+.cour_itabt_mel:hover .cour_itabt_keel > h4 {
+color: #ff5f45;
+}
+.warap_sury:hover .warap_sury_keel {
+  color: #ff5f45;
+}
+.sya_notask_mel {
+  background-color: #CCFBF1;
+  border: 1px solid #CCFBF1;
+}
+.hover\:shadow-\[0_0_30px_rgba\(20\2c 184\2c 166\2c 0\.5\)\].sya_notask_mel:hover {
+ --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color) !important;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.sya_notask_mel .inrn {
+background-color: #CCFBF1;
+border-radius: 12px;
+}
+.hover\:shadow-lg:hover.notshowado_accd {
+  --tw-shadow : 0px !important;
+}
+.notshowado_accd {
+  background-color: #0F766E !important;
+}
+.hover\:bg-teal-primary.notshowado_accd:hover {
+  background-color: #0F766E !important;
+  transform: translateY(-2px) scale(1.01);
+}
+.notshowado_accd:hover .accord_keel_clr {
+  color: #ff5f45;
+}
+.hovclr_main_stat:hover .hovclr_down_stat {
+  color: #ff5f45;
+}
+.vist_rhgt_form {
+  background-color: #0F766E !important;
+  border-radius: 12px;
+}
+.vist_rhgt_form:hover .inn_vsit {
+  color: #ff5f45;
+}
+.aspect-video.ascpect_now_open {
+  aspect-ratio: 16 / 8 !important;
+}
