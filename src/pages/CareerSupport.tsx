@@ -140,15 +140,15 @@ const CareerSupport = () => {
                   delay: index * 0.1,
                 }}
               >
-                <Card className="hovclr_main_stat glassmorphic-card text-center relative overflow-hidden h-full">
-                  <div className="absolute top-4 right-4 text-2xl font-bold text-white hovclr_down_stat">
+                <Card className="hovclr_main_stat glassmorphic-card text-center relative overflow-hidden h-full upcome_isunt">
+                  <div className="absolute top-4 right-4 text-2xl font-bold text-[#cc77aa52]">
                     {step.step}
                   </div>
                   <CardContent className="py-6 px-4 relative z-10">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 text-white rounded-lg mb-6">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-lg mb-6 text-[#ff5f45]">
                       {step.icon}
                     </div>
-                    <h3 className="text-xl font-bold mb-4 text-white">
+                    <h3 className="text-xl font-bold mb-4 text-white hovclr_down_stat">
                       {step.title}
                     </h3>
                     <p className="text-white/90 mb-8">{step.description}</p>

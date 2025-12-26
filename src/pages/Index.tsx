@@ -1,6 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Star, Users, Award, Briefcase, Code, Cpu, Shield, Bot, Settings, Zap, Rocket, Lightbulb, Heart, Target, TrendingUp } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Award,
+  Briefcase,
+  Code,
+  Cpu,
+  Shield,
+  Bot,
+  Settings,
+  Zap,
+  Rocket,
+  Lightbulb,
+  Heart,
+  Target,
+  TrendingUp,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -9,55 +27,72 @@ import ContactModal from "@/components/ui/ContactModal";
 import HiringPartners from "./HiringPartners";
 import TextReveal from "../components/ui/TextReveal";
 import heroTechObject from "../assets/hero-tech-object.png";
-import heroEngineer from "../assets/hero-engineer-removebg-preview.png";
-import IOTimage from "../assets/Shaping the Future of AI Agents_ Development Strategies and Emerging Trends.jpeg"
+// import heroEngineer from "../assets/hero-engineer-removebg-preview.png";
+import heroEngineer from "../assets/hero-sketch-final.png";
+// import IOTimage from "../assets/Shaping the Future of AI Agents_ Development Strategies and Emerging Trends.jpeg"
+import IOTimage from "../assets/iot-create.png";
 import { motion } from "framer-motion";
 const Index = () => {
   const [visibleSection, setVisibleSection] = useState("");
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("reveal-animation");
-          setVisibleSection(entry.target.id);
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-animation");
+            setVisibleSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
     const sections = document.querySelectorAll("section[id]");
-    sections.forEach(section => observer.observe(section));
+    sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
   }, []);
-  const activeCourses = [{
-    title: " outklass IoT Program",
-    description: "Build smart devices with ESP32,Arduino, sensors, MQTT, and cloud. Perfect for ECE/EEE students.",
-    duration: "2.5 Months",
-    level: "Beginner to Advanced",
-    tools: ["ESP32", "Arduino", "MQTT", "Cloud IoT", "Sensors"],
-    price: "₹19,999",
-    originalPrice: "₹39,999",
-    status: "active",
-    link: "/course/iot",
-    icon: <Cpu className="w-8 h-8" />
-  }];
-  const values = [{
-    icon: <Target className="w-8 h-8" />,
-    title: "Mission-Driven",
-    description: "Bridging the gap between classroom learning and industry requirements for Tier-2/3 students."
-  }, {
-    icon: <Heart className="w-8 h-8" />,
-    title: "Student-First",
-    description: "Every decision we make prioritizes student success and career transformation."
-  }, {
-    icon: <Lightbulb className="w-8 h-8" />,
-    title: "Innovation",
-    description: "Constantly evolving our curriculum to match the latest industry demands and technologies."
-  }, {
-    icon: <Rocket className="w-8 h-8" />,
-    title: "Excellence",
-    description: "Committed to delivering world-class training that produces industry-ready professionals."
-  }];
+  const activeCourses = [
+    {
+      title: " outklass IoT Program",
+      description:
+        "Build smart devices with ESP32,Arduino, sensors, MQTT, and cloud. Perfect for ECE/EEE students.",
+      duration: "2.5 Months",
+      level: "Beginner to Advanced",
+      tools: ["ESP32", "Arduino", "MQTT", "Cloud IoT", "Sensors"],
+      price: "₹19,999",
+      originalPrice: "₹39,999",
+      status: "active",
+      link: "/course/iot",
+      icon: <Cpu className="w-8 h-8" />,
+    },
+  ];
+  const values = [
+    {
+      icon: <Target className="w-8 h-8" />,
+      title: "Mission-Driven",
+      description:
+        "Bridging the gap between classroom learning and industry requirements for Tier-2/3 students.",
+    },
+    {
+      icon: <Heart className="w-8 h-8" />,
+      title: "Student-First",
+      description:
+        "Every decision we make prioritizes student success and career transformation.",
+    },
+    {
+      icon: <Lightbulb className="w-8 h-8" />,
+      title: "Innovation",
+      description:
+        "Constantly evolving our curriculum to match the latest industry demands and technologies.",
+    },
+    {
+      icon: <Rocket className="w-8 h-8" />,
+      title: "Excellence",
+      description:
+        "Committed to delivering world-class training that produces industry-ready professionals.",
+    },
+  ];
 
   // const comingSoonCourses = [
   //   {
@@ -102,69 +137,112 @@ const Index = () => {
   //   },
   // ];
 
-  const benefits = [{
-    icon: <Award className="w-8 h-8" />,
-    text: "100% Placement Assistance"
-  }, {
-    icon: <Code className="w-8 h-8" />,
-    text: "Real Industry Projects"
-  }, {
-    icon: <Users className="w-8 h-8" />,
-    text: "Industry Expert Training"
-  }, {
-    icon: <Briefcase className="w-8 h-8" />,
-    text: "Career-Tailored Curriculum"
-  }];
+  const benefits = [
+    {
+      icon: <Award className="w-8 h-8" />,
+      text: "100% Placement Assistance",
+    },
+    {
+      icon: <Code className="w-8 h-8" />,
+      text: "Real Industry Projects",
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      text: "Industry Expert Training",
+    },
+    {
+      icon: <Briefcase className="w-8 h-8" />,
+      text: "Career-Tailored Curriculum",
+    },
+  ];
   const isFilled = true;
-  const supportSteps = [{
-    step: "01",
-    title: "Resume Building",
-    description: "Professional resume creation with industry keywords and ATS optimization",
-    icon: <Award className="w-8 h-8 text-orange-500" />,
-    features: ["ATS-Optimized Format", "Industry Keywords", "Project Highlighting", "Skills Matrix"]
-  }, {
-    step: "02",
-    title: "Mock Interviews",
-    description: "1:1 mock interviews with industry experts and detailed feedback",
-    icon: <Users className="w-8 h-8 text-orange-500" />,
-    features: ["Technical Rounds", "HR Interviews", "Behavioral Questions", "Instant Feedback"]
-  }, {
-    step: "03",
-    title: "Job Referrals",
-    description: "Direct referrals to our 200+ hiring partners and exclusive job opportunities",
-    icon: <Briefcase className="w-8 h-8 text-orange-500" />,
-    features: ["Direct Referrals", "Hidden Job Market", "Exclusive Openings", "Priority Applications"]
-  }, {
-    step: "04",
-    title: "Career Mentorship",
-    description: "Ongoing career guidance and salary negotiation support",
-    icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
-    features: ["Salary Negotiation", "Career Planning", "Skill Development", "Industry Insights"]
-  }];
-  const testimonials = [{
-    name: "Priya Sharma",
-    role: "IoT Engineer at TCS",
-    content: "outklass transformed my career! From an ECE graduate with no practical skills to landing an IoT role in 4 months. The hands-on ESP32 projects were game-changing!",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
-  }, {
-    name: "Amit Kumar",
-    role: "Embedded IoT Developer at Wipro",
-    content: "The Industrial IoT program gave me hands-on experience with real devices, MQTT protocols, and cloud integration. Now I'm building smart factory solutions!",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-  }, {
-    name: "Sneha Patel",
-    role: "IoT Solutions Engineer at Infosys",
-    content: "Best decision ever! The sensor integration and Arduino projects prepared me for real industry challenges. Got 3 job offers within 2 weeks of completing the program.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-  }];
+  const supportSteps = [
+    {
+      step: "01",
+      title: "Resume Building",
+      description:
+        "Professional resume creation with industry keywords and ATS optimization",
+      icon: <Award className="w-6 h-6 text-orange-500" />,
+      features: [
+        "ATS-Optimized Format",
+        "Industry Keywords",
+        "Project Highlighting",
+        "Skills Matrix",
+      ],
+    },
+    {
+      step: "02",
+      title: "Mock Interviews",
+      description:
+        "1:1 mock interviews with industry experts and detailed feedback",
+      icon: <Users className="w-6 h-6 text-orange-500" />,
+      features: [
+        "Technical Rounds",
+        "HR Interviews",
+        "Behavioral Questions",
+        "Instant Feedback",
+      ],
+    },
+    {
+      step: "03",
+      title: "Job Referrals",
+      description:
+        "Direct referrals to our 200+ hiring partners and exclusive job opportunities",
+      icon: <Briefcase className="w-6 h-6 text-orange-500" />,
+      features: [
+        "Direct Referrals",
+        "Hidden Job Market",
+        "Exclusive Openings",
+        "Priority Applications",
+      ],
+    },
+    {
+      step: "04",
+      title: "Career Mentorship",
+      description: "Ongoing career guidance and salary negotiation support",
+      icon: <TrendingUp className="w-6 h-6 text-orange-500" />,
+      features: [
+        "Salary Negotiation",
+        "Career Planning",
+        "Skill Development",
+        "Industry Insights",
+      ],
+    },
+  ];
+  const testimonials = [
+    {
+      name: "Priya Sharma",
+      role: "IoT Engineer at TCS",
+      content:
+        "outklass transformed my career! From an ECE graduate with no practical skills to landing an IoT role in 4 months. The hands-on ESP32 projects were game-changing!",
+      rating: 5,
+      image:
+        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    },
+    {
+      name: "Amit Kumar",
+      role: "Embedded IoT Developer at Wipro",
+      content:
+        "The Industrial IoT program gave me hands-on experience with real devices, MQTT protocols, and cloud integration. Now I'm building smart factory solutions!",
+      rating: 5,
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    },
+    {
+      name: "Sneha Patel",
+      role: "IoT Solutions Engineer at Infosys",
+      content:
+        "Best decision ever! The sensor integration and Arduino projects prepared me for real industry challenges. Got 3 job offers within 2 weeks of completing the program.",
+      rating: 5,
+      image:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    },
+  ];
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       {/* <section className="relative min-h-screen hero-digital-bg flex items-center overflow-hidden"> */}
-      <section className="relative hero-digital-bg flex items-center overflow-hidden">
+      <section className="relative hero-digital-bg min-h-[90vh] flex items-center overflow-hidden">
         <div className="container-custom w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-16 lg:py-0">
           {/* Left Content */}
           <motion.div
@@ -237,25 +315,33 @@ const Index = () => {
               ease: "easeOut",
               delay: 0.2,
             }}
-            className="relative hidden lg:block"
+            className="relative hidden lg:flex items-center justify-center h-full"
           >
-            <div className="relative">
+            <div
+              className="
+      relative
+      w-[680px]
+      xl:w-[750px]
+      2xl:w-[820px]
+      h-[500px] xl:h-[550px]
+      pointer-events-none
+      "
+            >
               {/* Blended overlay effect */}
               {/* <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-teal-primary/60 z-10 rounded-2xl" />
               <div className="absolute inset-0 bg-gradient-to-t from-teal-primary/40 via-transparent to-transparent z-10 rounded-2xl" /> */}
               <img
                 src={heroEngineer}
                 alt="Futuristic engineer working on industrial automation"
+                loading="eager"
                 className="
-      relative
-      z-10
-      w-[520px]
-      xl:w-[620px]
-      2xl:w-[700px]
-      max-w-none
-      -translate-x-10
-      drop-shadow-[0_40px_80px_rgba(0,0,0,0.35)]
-      hero-image-mask
+        absolute
+        bottom-0
+        right-0
+        h-[100%]
+        w-auto
+        hero-image-mask
+        drop-shadow-[0_40px_90px_rgba(0,0,0,0.4)]
     "
               />
               {/* Glow effect */}
@@ -294,7 +380,7 @@ const Index = () => {
           <div className="grid grid-cols-2 gap-6 mb-12 max-w-md mx-auto">
             {[
               {
-                value: "4,500+",
+                value: "500+",
                 label: "Students Trained",
               },
               {
@@ -310,7 +396,7 @@ const Index = () => {
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 {/* <div className="text-2xl p-2 md:text-3xl font-bold text-teal-primary flex items-center justify-center border-solid rounded-sm opacity-100 bg-accent border-4 shadow-2xl border-accent text-primary-foreground"></div> */}
-                <Button size="lg" className="btn-glow text-lg px-8 py-7">
+                <Button size="lg" className="btn-glow text-xl px-8 py-7 w-[150px] lg:w-[180px] xl:w-[220px]">
                   {stat.value}
                   {stat.icon}
                 </Button>
@@ -445,11 +531,11 @@ const Index = () => {
                 }}
               >
                 <Card className="glassmorphic-card text-center relative overflow-hidden h-full warap_sury ">
-                  <div className="absolute top-4 right-4 text-3xl font-bold text-[#ae2e7b54]">
+                  <div className="absolute top-4 right-4 text-2xl font-bold text-[#cc77aa52]">
                     {step.step}
                   </div>
-                  <CardContent className="p-6 relative z-10">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 text-white rounded-lg mb-6">
+                  <CardContent className="p-5 relative z-10">
+                    <div className="inline-flex items-center justify-center w-14 h-14 bg-white/20 text-white rounded-lg mb-6">
                       {step.icon}
                     </div>
                     <h3 className="text-xl font-bold mb-4 text-white warap_sury_keel">

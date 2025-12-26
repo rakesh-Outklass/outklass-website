@@ -70,6 +70,19 @@ const Navigation = () => {
 
     return current === normalizePath(itemPath);
   };
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+
+    if (location.pathname === "/") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else {
+      navigate("/");
+    }
+  };
+
   return (
     <>
       <nav
@@ -82,7 +95,11 @@ const Navigation = () => {
         <div className="container-custom">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3 z-50">
+            <Link
+              to="/"
+              onClick={handleLogoClick}
+              className="flex items-center space-x-3 z-50"
+            >
               <img
                 src="/assets/outklass-logo.png"
                 alt=" outklass"

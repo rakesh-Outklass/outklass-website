@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import ContactModal from "@/components/ui/ContactModal";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
+import Marquee from "react-fast-marquee";
 
 // Course card props interface
 interface CourseCardProps {
@@ -45,7 +46,7 @@ const CourseCard = memo(({
           isComingSoon ? "opacity-90" : ""
         }`}
       >
-        <CardContent className="new_livp_crdman p-0 h-full">
+        <CardContent className="new_livp_crdman p-0 h-full ">
           {isComingSoon ? (
             // Coming Soon Card Layout
             <>
@@ -282,31 +283,31 @@ const Courses = () => {
             transition={{
               duration: 0.5,
             }}
-            className="text-center max-w-4xl mx-auto mb-16"
+            className="text-center max-w-4xl mx-auto mb-12"
           >
-            <div className="inline-flex items-center justify-center space-x-2 mb-6">
+            {/* <div className="inline-flex items-center justify-center space-x-2 mb-6">
               <div className="w-2 h-2 bg-blinkpath-orange rounded-full animate-pulse"></div>
               <span className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
                 FUTURE-READY ENGINEERING SKILLS
               </span>
               <div className="w-2 h-2 bg-gen-z-purple rounded-full animate-pulse"></div>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-bebasNue mb-6 text-accent">
+            </div> */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-bebasNue mb-4 text-accent">
               Master Tomorrow's{" "}
               <span className="gradient-text">ENGINEERING Skills</span>
             </h1>
-            <p className="text-xl mb-8 leading-relaxed text-slate-500">
+            <p className="text-xl mb-6 leading-relaxed text-slate-500">
               Industry-focused programs designed to make you job-ready in IoT
               and Embedded Systems
             </p>
-            <div className="flex flex-wrap gap-3 justify-center mx-0 px-0">
+            {/* <div className="flex flex-wrap gap-3 justify-center mx-0 px-0">
               <Badge className="btn-glow group-hover:scale-[1.02] transition-transform duration-300 text-xs btn-glow-newinters-frgl">
                 🔥 Hot Skills
               </Badge>
               <Badge className="btn-glow-newinters group-hover:scale-[1.02] transition-transform duration-300 text-xs btn-glow-newinters-frgl">
                 💼 Industry Ready
               </Badge>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Live Courses Section */}
@@ -330,23 +331,46 @@ const Courses = () => {
             className="mb-20"
           >
             <div className="flex items-center justify-between mb-12 live_head_son bg-teal-light">
-              <div className="flex items-center space-x-4">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+              <Marquee
+                direction="left"
+                speed={25} // slow + premium
+                gradient={false} // you already have gradient text
+                pauseOnHover={false}
+                className="overflow-hidden"
+              >
+                <div className="flex items-center space-x-4 mx-[11rem]">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
 
-                <h2 className="text-3xl font-bold text-white gradient-text">
-                  Live Programs
-                </h2>
-              </div>
+                  <h2 className="text-3xl font-bold text-white gradient-text gradient-moving-text">
+                    Live Programs
+                  </h2>
+                </div>
+                <div className="flex items-center space-x-4 mx-[11rem]">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+
+                  <h2 className="text-3xl font-bold text-white gradient-text gradient-moving-text">
+                    Live Programs
+                  </h2>
+                </div>
+                <div className="flex items-center space-x-4 mx-[11rem]">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+
+                  <h2 className="text-3xl font-bold text-white gradient-text gradient-moving-text">
+                    Live Programs
+                  </h2>
+                </div>
+              </Marquee>
+
               {/* <Badge className="bg-green-500/20 text-green-400 px-6 py-3 text-sm font-medium border animate-neon-pulse border-primary shadow-sm rounded-md">
                 ✅ Enrollment Open
               </Badge> */}
-              <p className="enrollment-animated-text font-medium text-sm md:text-base flex items-center gap-2">
+              {/* <p className="enrollment-animated-text font-medium text-sm md:text-base flex items-center gap-2">
                 <span>✅</span>
                 <span className="gradient-moving-text">Enrollment Open</span>
-              </p>
+              </p> */}
             </div>
 
-            <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-4 max-w-md mx-auto">
+            <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-4 max-w-md mx-auto px-4">
               {activeCourses.map((course, index) => (
                 <CourseCard key={course.title} course={course} index={index} />
               ))}
@@ -373,23 +397,52 @@ const Courses = () => {
             }}
           >
             <div className="flex items-center justify-between mb-12 live_head_son bg-teal-light">
-              <div className="flex items-center space-x-4">
+              <Marquee
+                direction="left"
+                speed={25} // slow + premium
+                gradient={false} // you already have gradient text
+                pauseOnHover={false}
+                className="overflow-hidden"
+              >
+                <div className="flex items-center space-x-4 mx-[11rem]">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+
+                  <h2 className="text-3xl font-bold text-white gradient-text gradient-moving-text">
+                    Coming Soon
+                  </h2>
+                </div>
+                <div className="flex items-center space-x-4 mx-[11rem]">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+
+                  <h2 className="text-3xl font-bold text-white gradient-text gradient-moving-text">
+                    Coming Soon
+                  </h2>
+                </div>
+                <div className="flex items-center space-x-4 mx-[11rem]">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+
+                  <h2 className="text-3xl font-bold text-white gradient-text gradient-moving-text">
+                    Coming Soon
+                  </h2>
+                </div>
+              </Marquee>
+              {/* <div className="flex items-center space-x-4">
                 <div className="w-3 h-3 bg-blinkpath-orange rounded-full animate-pulse"></div>
 
-                <h2 className="text-3xl font-bold text-white gradient-text">
+                <h2 className="text-3xl font-bold text-white gradient-text gradient-moving-text">
                   Coming Soon
                 </h2>
-              </div>
+              </div> */}
               {/* <Badge className="btn-glow hover:scale-105 transition-all duration-300 animate-neon-pulse bg-blinkpath-orange/20 text-white px-6 py-3 text-sm font-medium border border-blinkpath-orange/30">
                 🚀 In Development
               </Badge> */}
-              <p className="enrollment-animated-text font-medium text-sm md:text-base flex items-center gap-2">
+              {/* <p className="enrollment-animated-text font-medium text-sm md:text-base flex items-center gap-2">
                 <span> 🚀 </span>
                 <span className="gradient-moving-text">In Development</span>
-              </p>
+              </p> */}
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 px-6">
               {comingSoonCourses.map((course, index) => (
                 <CourseCard
                   key={course.title}

@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowRight, Clock, Users, Award, CheckCircle, Play, Download, Calendar, Star, Target, Rocket, Code, Zap, Wifi, Cpu, Cloud, Smartphone, Thermometer, Wrench, Server, Package, CircuitBoard } from "lucide-react";
 import iotFinal from "@/assets/iot-final.png";
-import IOTimage from "../assets/Shaping the Future of AI Agents_ Development Strategies and Emerging Trends.jpeg"
+import IOTimage from "../assets/iot-create.png";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -465,6 +465,50 @@ const IoTCourse = () => {
                   </CardContent>
                 </Card>
               </div>
+
+              <section className="section-padding bg-muted/30">
+                <div className="container-custom">
+                  <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
+                      Build{" "}
+                      <span className="gradient-text">
+                        5 Real-World Projects
+                      </span>
+                    </h2>
+                    <p className="text-xl text-muted-foreground">
+                      Hands-on projects that prepare you for the IoT industry
+                    </p>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 border-0">
+                    {projects.map((project, index) => (
+                      <Card
+                        key={index}
+                        className="warap_sury card-hover my-0 mx-0 px-[24px] py-[2px] pr-[5px] mt-[2px] mr-[10px] mb-px pt-0 pl-[5px] pb-0 border-teal-400"
+                      >
+                        <CardContent className="p-6 pb-0 pl-[2px] pr-0 pt-[2px] border-0 px-[24px] py-[24px] mx-[7px] my-[5px] border-none shadow-none">
+                          <h3 className="text-xl font-bold mb-3 warap_sury_keel">
+                            {project.title}
+                          </h3>
+                          <p className="mb-4 text-teal-200">
+                            {project.description}
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {project.technologies.map((tech, techIndex) => (
+                              <span
+                                key={techIndex}
+                                className=" py-1 bg-primary/10 text-white rounded-full text-sm"
+                              >
+                                • {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </div>
+              </section>
             </TabsContent>
             <TabsContent value="curriculum" className="space-y-6">
               <div className="text-center mb-8">
@@ -531,6 +575,50 @@ const IoTCourse = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
+
+              <section className="section-padding bg-muted/30">
+                <div className="container-custom">
+                  <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
+                      Build{" "}
+                      <span className="gradient-text">
+                        5 Real-World Projects
+                      </span>
+                    </h2>
+                    <p className="text-xl text-muted-foreground">
+                      Hands-on projects that prepare you for the IoT industry
+                    </p>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 border-0">
+                    {projects.map((project, index) => (
+                      <Card
+                        key={index}
+                        className="warap_sury card-hover my-0 mx-0 px-[24px] py-[2px] pr-[5px] mt-[2px] mr-[10px] mb-px pt-0 pl-[5px] pb-0 border-teal-400"
+                      >
+                        <CardContent className="p-6 pb-0 pl-[2px] pr-0 pt-[2px] border-0 px-[24px] py-[24px] mx-[7px] my-[5px] border-none shadow-none">
+                          <h3 className="text-xl font-bold mb-3 warap_sury_keel">
+                            {project.title}
+                          </h3>
+                          <p className="mb-4 text-teal-200">
+                            {project.description}
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {project.technologies.map((tech, techIndex) => (
+                              <span
+                                key={techIndex}
+                                className=" py-1 bg-primary/10 text-white rounded-full text-sm"
+                              >
+                                • {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </div>
+              </section>
             </TabsContent>
             <TabsContent value="tools" className="space-y-10">
               <div className="text-center mb-10">
@@ -656,7 +744,7 @@ const IoTCourse = () => {
         </div>
       </section>
       {/* Projects Section */}
-      <section className="section-padding bg-muted/30">
+      {/* <section className="section-padding bg-muted/30">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
@@ -693,7 +781,7 @@ const IoTCourse = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Course Content */}
 
